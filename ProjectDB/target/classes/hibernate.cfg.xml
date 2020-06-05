@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+
+  <!-- Connect setting -->
+  <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+  <!--<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/maternity_hospital</property>-->
+  <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+  <property name="hibernate.connection.username">postgres</property>
+  <property name="hibernate.connection.password">123</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+
+  <!-- SQL dialect -->
+  <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
+  <property name="show_sql">true</property>
+
+  <!-- Annotated entity classes-->
+  <mapping class="class_model.Doctor"/>
+  <mapping class="class_model.Child"/>
+  <mapping class="class_model.Mother"/>
+  <mapping class="class_model.HospitalRoom"/>
+
+</session-factory>
+</hibernate-configuration>
